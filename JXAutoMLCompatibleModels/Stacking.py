@@ -78,6 +78,7 @@ class StackingClassifier_Pro():
         return self.model.get_feature_names_out(input_features=input_features)
 
     def get_metadata_routing(self):
+
         return self.model.get_metadata_routing()
 
     def set_fit_request(self, fit_request):
@@ -115,7 +116,7 @@ class StackingRegressor_Pro():
         self.verbose = kwargs.get('verbose', 0)
         # this setup allows to tune the hp of the final estimator
         self.final_estimator = kwargs['final_estimator_class'](
-            final_estimators_params)
+            **final_estimators_params)
 
         self.model = StackingRegressor(
             estimators=self.estimators_list[:self.num_estimators],
