@@ -2,7 +2,7 @@ from setuptools import setup, find_packages
 
 setup(
     name="JXAutoMLCompatibleModels",  # Replace with your package name
-    version="0.0.0",
+    version="0.0.1",
     author="Lang Chen",
     author_email="ronchen6666@gmail.com",
     description="Models refactored to work with JXAutoML",
